@@ -6,7 +6,7 @@ Predicting the total spending amount for next month
 
 
 ## Project Structure
-
+```
 ├── README.md          <- The top-level documentation for this project.
 ├── data
 │   ├── processed      <- The final data sets for customer segmentation.
@@ -15,7 +15,7 @@ Predicting the total spending amount for next month
 ├── notebooks          <- Jupyter notebooks containing the explorations performed in this project
 ├── requirements.txt   <- The requirements file for reproducing the project
 ├── src                <- Source code used in this project.
-
+```
 ## Code Files and Jupyter Notebooks
 
 Following the preceding structure, the succeeding list are the code files and their descriptions:

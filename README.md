@@ -4,16 +4,19 @@ Predicting the total spending amount for next month:
 
 link to access the deploy app -> https://wongwara-predict-next-month-app-3g0mjl.streamlit.app
 
+## Experiment results
+
+As a result, the best model is Decision Tree, which gives the best MAPE. However, the MAPE score is 113.44, which means that on average, our predictions depart from the actual values by 113.44%. 
+
+A high MAPE score implies that the model's predictions are **inaccurate and need to be improved**. 
+
+****
+
 ## Overview
 Our bank recognises the significant effect these insights can have on our business and our valued clients. By leveraging machine learning's power, we can stimulate innovation, improve operational efficiency, and provide customised services to our client's needs.
 
-There are 4 main objectives for our project:
-1. Experiment A: Better decision making- Client Financial management: Help clients organise their budget by predicting their spending for the next month. This will help improve financial stability and overall pleasure.
-2. Experiment B: Prevention of fraud - Help the compliance team identify and stop fraudulent behaviour. This will protect our financial stability and keep our client's faith intact.
-3. Experiment C: Improved customer experience - Assist the sales and marketing teams in maximising their participation and enjoyment for clients likely to raise their expenditure in the next three months. By focusing our marketing strategies and offers on these potential high-value clients.
-4. Experiment D: Better risk management - Discover abnormal spending patterns: Help us reach out to consumers proactively, providing customised advice and assistance in resolving any potential problems or financial challenges they may face.
-
-And This repository is focus only Experiment A
+The goal for this project:
+Experiment A: Better decision making- Client Financial management: Help clients organise their budget by predicting their spending for the next month. This will help improve financial stability and overall pleasure.
 
 ## Project Structure
 ```
@@ -41,6 +44,7 @@ Following the preceding structure, the succeeding list are the code files and th
 - **prediction.py**: code for training and selecting the best next month prediction model
 
 - **load_model()**: best trained model (decision tree regressor)
+
 ## Data understanding
 In our dataset, two files merge; the first file contains transaction history data, which can be used to examine spending patterns, identify trends, and perform predictive analysis to forecast future spending behaviour with the same account number and credit card number; the second file contains client information such as addresses and personal details, which can improve prediction accuracy and offer personalised financial management recommendations. 
 
@@ -56,6 +60,16 @@ The dataset contains the following features:
 6. Current_month_spending: Amount of spending in this month
 7. Next_month_spending: Amount of next month spending
 
+## Ethical concern
+
+These customer information contain personal information that can be used to identify an individual and potentially expose them to harm if it gets into the wrong hands. This raises various ethical concerns.
+1. **Privacy and security**, because the SSN can be used to perpetrate identity theft or fraud. with the use of these information increases the danger of a data breach or other security issue, which could reveal clients' sensitive personal information and undermine their trust in our client.
+2. **Data misappropriation**: There is a possibility that employees or other individuals having access to SSN data will misuse it for their own objectives, such as identity theft or financial fraud. This could have legal and reputational ramifications for our client.
+3. **Informed consent**: Clients may not have been fully informed about the gathering and use of their SSN, and as a result, may not have given informed consent for its use. This may pose ethical problems about openness and protecting the autonomy of clients.
+
+Furthermore, as data scientists, we should be cautious in how we utilise this data, although collecting SSNs is important for the project's objectives to detect the fuad, and this data will not be shared with other parties.
+
+Instead, and for this project I will look into other methods of identification or verification that do not involve SSNs.
 
 ## Reference
 **For merge files**

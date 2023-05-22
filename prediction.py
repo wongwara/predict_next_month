@@ -14,6 +14,8 @@ from datetime import datetime, date
 import warnings
 warnings.filterwarnings("ignore")
 
+df_monthly = pd.read_csv("https://raw.githubusercontent.com/wongwara/predict_next_month/main/df_monthly.csv")
+
 def out_iqr(df_monthly, column):
     global lower,upper
     q25, q75 = np.quantile(df_monthly[column], 0.25), np.quantile(df_monthly[column], 0.75)

@@ -60,7 +60,7 @@ def show_explore_page():
     st.pyplot(fig2)
     st.write('Here the red zone represents the outlier zone! The records present in that zone are considered as outliers')
     
-    
+    st.subheader('We create the new dataframe without outlier')
     df_new = df[(df.total_spending < upper) | (df.total_spending > lower)]
     df_new = df_new.drop(['full_name'],axis=1)
     

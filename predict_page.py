@@ -55,7 +55,10 @@ def show_predict_page():
         })
         
         next_month = regressor_loaded.predict(X)
-      # Display the predicted next month spending
-        st.write(f"Your next month spending will be: {next_month}")
-    
+        next_month = np.round(next_month, 2)  # Round the value to two digits
+        next_month_str = str(next_month[0])  # Convert to string
+
+        # Display the predicted next month spending
+        st.write(f"Your next month spending will be: {next_month_str}")
+      
     st.write(""" 36106 Machine Learning Algorithms and Applications - Autumn 2023 University of Technology Sydney """)

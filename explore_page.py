@@ -81,7 +81,7 @@ def show_explore_page():
     sns.heatmap(df_new.corr(), annot=True, ax=ax)
     st.pyplot(fig3)
     
-    st.write('This heatmap shows that our dataset did not have multicolinearity problem since every features has the correlation lower than 0.6')
+    st.write('This heatmap shows that our dataset did not have multicolinearity problem since every features has the correlation lower than 0.7')
     
     # Create the heatmap
     plt.figure(figsize=(4, 6))

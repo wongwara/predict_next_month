@@ -13,6 +13,7 @@ def show_predict_page():
     st.subheader("We need some information to predict your next month")
 
     age = st.number_input('Enter your age', min_value=0, max_value=150, step=1)
+    current_month_spending = st.number_input('Enter your current month spending', min_value=0, max_value=20000000, step=1)
     
     month_dict = {
         'Jan': 0,
@@ -48,6 +49,7 @@ def show_predict_page():
     if ok:
         X = pd.DataFrame({
         'age':[age],
+        'current_month_spending':[current_month_spending],
         'month': [month],
         'gender': [gender],
         })

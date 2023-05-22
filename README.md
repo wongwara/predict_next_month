@@ -10,39 +10,62 @@ link to access the deploy app -> https://wongwara-predict-next-month-app-3g0mjl.
 ## Project Structure
 ```
 ├── README.md          <- The top-level documentation for this project.
-├── data
-│   ├── processed      <- The final data sets for customer segmentation.
-│   └── raw            <- The original, immutable datasets.
-│
-├── notebooks          <- Jupyter notebooks containing the explorations performed in this project
-├── requirements.txt   <- The requirements file for reproducing the project
-├── src                <- Source code used in this project.
+├── df_monthly.csv     <- The final data sets for monthly transactions.
+├── Experient A - Client Financial management.ipynb <- Jupyter notebooks 
+├── requirements.txt      <- The requirements file for the project
+├── app.py                <- for run in streamlit
+├── explore_page.py       <- for the explore data page in streamlit
+├── prediction_page.py    <- for the predict data page in streamlit
+├── prediction.py         <- for keep the model in pickle for the streamlit deploy
 ```
 ## Code Files and Jupyter Notebooks
 
 Following the preceding structure, the succeeding list are the code files and their descriptions:
 
-notebooks/handling_missing_values.ipynb: notebook containing data cleaning and preprocessing specifically on handling columns with missing values
-notebooks/eda_on_segments.ipynb: notebook containing exploratory data analysis and segment description generation
-notebooks/feature_engineering.ipynb: notebook containing creation of new features for training
-src/app.py: Streamlit web application for the customer segmentation model
-src/utils.py: contains all helper functions for cleaning, preprocessing, training, and deployment
-src/train.py: code for training and selecting the best customer segmentation model
-models/model.joblib: best trained model (gradient boosting classifier)
+Experient A - Client Financial management.ipynb: notebook containing exploratory data analysis and different algorithms fit for the experiment.
+
+app.py: Streamlit web application for the next month prediction model
+
+explore_page.py: contains cleaning, preprocessing, training, and deployment for our model with visualisations
+
+prediction_page.py: code for training and selecting the best next month prediction model
+
+prediction.py: code for training and selecting the best next month prediction model
+
+load_model(): best trained model (decision tree regressor)
 
 ## Features
 The dataset contains the following features:
-
-ID: Customer ID
-Gender: Gender of the customer
-Age: Age of the customer
-Spending Score: Score assigned based on customer behavior and spending nature
-Family Size: Number of family members of the customer
-Graduated: Whether the customer has graduated or not
-Profession: Profession of the customer
-Work Experience: Work experience of the customer in years
-Var_1: Anonymised category for the customer
-Segmentation: (target) Customer segment
+1. Full_name: Full name of customer
+2. Age: Age of the customer
+3. Gender: Gender of the customer
+4. Current_month_spending: Amount of spending in this month
+5. Next_month_spending: Amount of next month spending
 
 
+## Reference
+**For merge files**
+
+Joshua, S. (2022, April 25). How to combine multiple CSV files using Python for your analysis. Medium. https://medium.com/@stella96joshua/how-to-combine-multiple-csv-files-using-python-for-your-analysis-a88017c6ff9e
+
+Opallage, M. (2020, September 8). Answer to ‘python pandas error tokenizing data’. Stack Overflow. https://stackoverflow.com/a/63797557
+
+**For age column and date time**
+
+Khan, A. (2022, November 18). Answer to ‘scikit-learn linear regression using datetime values and forecasting’. Stack Overflow. https://stackoverflow.com/a/74488306
+
+Convert birth date to age in Pandas. (2021, February 1). GeeksforGeeks. https://www.geeksforgeeks.org/convert-birth-date-to-age-in-pandas/
+
+**For visualization**
+
+Color palettes for designers and artists—Color hunt. (n.d.). Retrieved 12 May 2023, from https://colorhunt.co/
+
+**For predict the next month transactions**
+
+Nguyen, L. (2022, June 18). Predict next month transaction with linear regression(Part 1). Medium. https://medium.com/@ndleah/predict-next-month-transaction-with-linear-regression-part-1-917a79b6ae0c
+
+**For outlier**
+
+https://www.kaggle.com/code/rpsuraj/outlier-detection-techniques-simplified
+**for streamlit**
 https://github.com/gersongerardcruz/customer_segmentation#code-files-and-jupyter-notebooks

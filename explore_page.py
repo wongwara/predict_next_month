@@ -35,9 +35,9 @@ def show_explore_page():
     sns.distplot(df_monthly['total_spending'])
     st.pyplot(fig)
     st.write('Take a look at the "total_spending" for inspection. I will create a basic density plot, which is one of the most effective visualisations for finding outliers.')
-    def out_iqr(df_monthly, column):
+    def out_iqr(df, column):
         global lower,upper
-        q25, q75 = np.quantile(df_monthly[column], 0.25), np.quantile(df_monthly[column], 0.75)
+        q25, q75 = np.quantile(df[column], 0.25), np.quantile(df[column], 0.75)
         # calculate the IQR
         iqr = q75 - q25
         # calculate the outlier cutoff
@@ -47,15 +47,15 @@ def show_explore_page():
 
       
         # Calculate the number of records below and above lower and above bound value respectively
-        df1 = df_monthly[df_monthly[column] > upper]
-        df2 = df_monthly[df_monthly[column] < lower]
+        df1 = df[df[column] > upper]
+        df2 = df[df[column] < lower]
         return print('Total number of outliers are', df1.shape[0]+ df2.shape[0])
-    out_iqr(df_monthly ,'total_spending')
+    out_iqr(df ,'total_spending')
     
     plt.figure(figsize = (10,6))
-    sns.distplot(df_monthly.total_spending, kde=False)
-    plt.axvspan(xmin = lower,xmax= df_monthly.total_spending.min(),alpha=0.2, color='red')
-    plt.axvspan(xmin = upper,xmax= df_monthly.total_spending.max(),alpha=0.2, color='red')
+    sns.distplot(df.total_spending, kde=False)
+    plt.axvspan(xmin = lower,xmax= df.total_spending.min(),alpha=0.2, color='red')
+    plt.axvspan(xmin = upper,xmax= df.total_spending.max(),alpha=0.2, color='red')
     st.pyplot(fig)
     st.write('Here the red zone represents the outlier zone! The records present in that zone are considered as outliers')
     

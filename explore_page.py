@@ -28,7 +28,7 @@ def show_explore_page():
             )
     st.subheader("The correlation between current month and other features: Heatmap")
     # Select numeric columns only
-    numeric_columns = df_monthly.select_dtypes(include=['float64', 'int64'])
+    numeric_columns = df.select_dtypes(include=['float64', 'int64'])
 
     # Create the heatmap plot
     fig, ax = plt.subplots(figsize=(15, 10))

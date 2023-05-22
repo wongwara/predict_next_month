@@ -5,7 +5,15 @@ Predicting the total spending amount for next month:
 link to access the deploy app -> https://wongwara-predict-next-month-app-3g0mjl.streamlit.app
 
 ## Overview
+Our bank recognises the significant effect these insights can have on our business and our valued clients. By leveraging machine learning's power, we can stimulate innovation, improve operational efficiency, and provide customised services to our client's needs.
 
+There are 4 main objectives for our project:
+1. Experiment A: Better decision making- Client Financial management: Help clients organise their budget by predicting their spending for the next month. This will help improve financial stability and overall pleasure.
+2. Experiment B: Prevention of fraud - Help the compliance team identify and stop fraudulent behaviour. This will protect our financial stability and keep our client's faith intact.
+3. Experiment C: Improved customer experience - Assist the sales and marketing teams in maximising their participation and enjoyment for clients likely to raise their expenditure in the next three months. By focusing our marketing strategies and offers on these potential high-value clients.
+4. Experiment D: Better risk management - Discover abnormal spending patterns: Help us reach out to consumers proactively, providing customised advice and assistance in resolving any potential problems or financial challenges they may face.
+
+And This repository is focus only Experiment A
 
 ## Project Structure
 ```
@@ -33,6 +41,10 @@ prediction_page.py: code for training and selecting the best next month predicti
 prediction.py: code for training and selecting the best next month prediction model
 
 load_model(): best trained model (decision tree regressor)
+## Data understanding
+In our dataset, two files merge; the first file contains transaction history data, which can be used to examine spending patterns, identify trends, and perform predictive analysis to forecast future spending behaviour with the same account number and credit card number; the second file contains client information such as addresses and personal details, which can improve prediction accuracy and offer personalised financial management recommendations. 
+
+There are 1000 customers with the transaction data from December 2018 – December 2022 There are 4,260,904 rows and 23 variables in the dataset. 
 
 ## Features
 The dataset contains the following features:

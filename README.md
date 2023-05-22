@@ -30,17 +30,17 @@ And This repository is focus only Experiment A
 
 Following the preceding structure, the succeeding list are the code files and their descriptions:
 
-Experient A - Client Financial management.ipynb: notebook containing exploratory data analysis and different algorithms fit for the experiment.
+- **Experient A - Client Financial management.ipynb**: notebook containing exploratory data analysis and different algorithms fit for the experiment.
 
-app.py: Streamlit web application for the next month prediction model
+- **app.py**: Streamlit web application for the next month prediction model
 
-explore_page.py: contains cleaning, preprocessing, training, and deployment for our model with visualisations
+- **explore_page.py**: contains cleaning, preprocessing, training, and deployment for our model with visualisations
 
-prediction_page.py: code for training and selecting the best next month prediction model
+- **prediction_page.py**: code for training and selecting the best next month prediction model
 
-prediction.py: code for training and selecting the best next month prediction model
+- **prediction.py**: code for training and selecting the best next month prediction model
 
-load_model(): best trained model (decision tree regressor)
+- **load_model()**: best trained model (decision tree regressor)
 ## Data understanding
 In our dataset, two files merge; the first file contains transaction history data, which can be used to examine spending patterns, identify trends, and perform predictive analysis to forecast future spending behaviour with the same account number and credit card number; the second file contains client information such as addresses and personal details, which can improve prediction accuracy and offer personalised financial management recommendations. 
 

@@ -9,8 +9,10 @@ link to access the deploy app -> https://wongwara-predict-next-month-app-3g0mjl.
 As a result, the best model is Decision Tree, which gives the best MAPE. However, the MAPE score is 113.44, which means that on average, our predictions depart from the actual values by 113.44%. 
 
 A high MAPE score implies that the model's predictions are **inaccurate and need to be improved**. 
+However, you still can access the model prediction in the above link.
 
-
+<img width="1509" alt="Screenshot 2023-05-23 at 6 55 55 am" src="https://github.com/wongwara/predict_next_month/assets/107904836/abe51326-d5f3-4bf6-a1e4-0a5502972baa">
+Figure 1: show the app prediction page
 
 ## Overview
 Our bank recognises the significant effect these insights can have on our business and our valued clients. By leveraging machine learning's power, we can stimulate innovation, improve operational efficiency, and provide customised services to our client's needs.

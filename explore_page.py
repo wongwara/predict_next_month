@@ -14,7 +14,7 @@ def load_data():
 df = load_data()
 
 def show_explore_page():
-    st.title("Explore data for Predict next month")
+    st.title("💵 Explore data for Predict next month")
   
     st.write(
         """ 

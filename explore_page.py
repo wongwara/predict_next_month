@@ -53,11 +53,11 @@ def show_explore_page():
         return print('Total number of outliers are', df1.shape[0]+ df2.shape[0])
     out_iqr(df ,'total_spending')
     
-    plt.figure(figsize = (10,6))
+    fig2 = plt.figure(figsize = (10,6))
     sns.distplot(df.total_spending, kde=False)
     plt.axvspan(xmin = lower,xmax= df.total_spending.min(),alpha=0.2, color='red')
     plt.axvspan(xmin = upper,xmax= df.total_spending.max(),alpha=0.2, color='red')
-    st.pyplot(fig)
+    st.pyplot(fig2)
     st.write('Here the red zone represents the outlier zone! The records present in that zone are considered as outliers')
     
     

@@ -9,7 +9,7 @@ regressor_loaded = data["model"]
 
 
 def show_predict_page():
-    st.title("Predict Next Month")
+    st.title("💵 Predict Next Month")
     st.write("""Client Financial management: Help clients organise their budget by predicting their spending for the next month. This will help improve financial stability and overall pleasure.""")
     st.subheader("We need some information to predict your next month")
 

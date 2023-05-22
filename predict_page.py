@@ -1,36 +1,17 @@
-from sklearn.preprocessing import OrdinalEncoder
 import streamlit as st
 import pandas as pd
 from prediction import load_model
-from sklearn.svm import SVC
 import re
 
 data = load_model()
 regressor_loaded = data["model"]
-jobClassification_enc = data["encode"]
+
 
 def show_predict_page():
-    st.title("🤖 Salary Prediction")
-    st.write(""" This project is for the job-seeker and students to searching the expected salary from related information, such as location or job subclassification""")
-    st.subheader("We need some information to predict the salary")
-    job_classification_dict = {
-    'Information & Communication Technology': 0,
-    'Banking & Financial Services': 1,
-    'Science & Technology': 2,
-    'Education & Training': 3,
-    'Government & Defence': 4,
-    'Consulting & Strategy': 5,
-    'Healthcare & Medical': 6,
-    'Human Resources & Recruitment': 7,
-    'Marketing & Communications': 8,
-    'Retail & Consumer Products': 9,
-    'Administration & Office Support': 10,
-    'Accounting': 11,
-    'Insurance & Superannuation': 12,
-    'Mining, Resources & Energy': 13,
-    'Real Estate & Property': 14,
-    'Manufacturing, Transport & Logistics': 15,
-    'Engineering': 16}
+    st.title("Predict Next Month")
+    st.write("""Client Financial management: Help clients organise their budget by predicting their spending for the next month. This will help improve financial stability and overall pleasure.""")
+    st.subheader("We need some information to predict your next month")
+
     state_dict = {'Australian Capital Territory': 0,
                   'South Australia': 1,
                   'Western Australia': 2}

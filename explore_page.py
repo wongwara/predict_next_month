@@ -32,7 +32,7 @@ def show_explore_page():
     st.write('This heatmap shows that our dataset did not have multicolinearity problem since every features has the correlation lower than 0.6')
     
     fig = plt.figure(figsize = (10,5))
-    sns.distplot(df_monthly['total_spending'])
+    sns.distplot(df['total_spending'])
     st.pyplot(fig)
     st.write('Take a look at the "total_spending" for inspection. I will create a basic density plot, which is one of the most effective visualisations for finding outliers.')
     def out_iqr(df, column):

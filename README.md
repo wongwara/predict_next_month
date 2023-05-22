@@ -10,7 +10,7 @@ As a result, the best model is Decision Tree, which gives the best MAPE. However
 
 A high MAPE score implies that the model's predictions are **inaccurate and need to be improved**. 
 
-****
+
 
 ## Overview
 Our bank recognises the significant effect these insights can have on our business and our valued clients. By leveraging machine learning's power, we can stimulate innovation, improve operational efficiency, and provide customised services to our client's needs.

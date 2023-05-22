@@ -35,14 +35,14 @@ def show_predict_page():
         'Female': 0,
     }
     
-    with col1:
-        st.subheader("**month**")
-        month_options = list(month_dict.keys())
-        month = st.selectbox("month", month_options)
-        month = month_dict[month]
-        gender_options = list(gender_dict.keys())
-        gender = st.selectbox("gender", gender_options)
-        gender = gender_dict[gender]
+    
+    st.subheader("**month**")
+    month_options = list(month_dict.keys())
+    month = st.selectbox("month", month_options)
+    month = month_dict[month]
+    gender_options = list(gender_dict.keys())
+    gender = st.selectbox("gender", gender_options)
+    gender = gender_dict[gender]
 
     ok = st.button("Calculate next month total spending")
     if ok:

@@ -13,19 +13,13 @@ def load_data():
 df = load_data()
 
 def show_explore_page():
-    st.title("Predict next month")
+    st.title("Explore data for Predict next month")
   
     st.write(
         """ 
        As bank data scientists, we employ machine learning to analyse the huge amount of data available in banking. This data includes transaction history, client information, and meaningful financial information. We can swiftly process and evaluate this massive amount of data by leveraging machine learning algorithms' capabilities, detecting anomalies, and making accurate forecasts.
        """
     ) 
-    
-    st.write(
-        """
-             Therefore, the objective of this project would be to develop a machine learning model that accepts a job title and the job description with any related words from the job as input and returns expected salary associated with that job.
-             """
-            )
     st.subheader("The correlation between current month and other features: Heatmap")
     # Select numeric columns only
     numeric_columns = df.select_dtypes(include=['float64', 'int64'])
@@ -34,4 +28,61 @@ def show_explore_page():
     fig, ax = plt.subplots(figsize=(15, 10))
     sns.heatmap(numeric_columns.corr(), annot=True, ax=ax)
     st.pyplot(fig)
+    
+    st.write('This heatmap shows that our dataset did not have multicolinearity problem since every features has the correlation lower than 0.6')
+    
+    fig = plt.figure(figsize = (10,5))
+    sns.distplot(df_monthly['total_spending'])
+    st.pyplot(fig)
+    st.write('Take a look at the "total_spending" for inspection. I will create a basic density plot, which is one of the most effective visualisations for finding outliers.')
+    def out_iqr(df_monthly, column):
+        global lower,upper
+        q25, q75 = np.quantile(df_monthly[column], 0.25), np.quantile(df_monthly[column], 0.75)
+        # calculate the IQR
+        iqr = q75 - q25
+        # calculate the outlier cutoff
+        cut_off = iqr * 1.5
+        # calculate the lower and upper bound value
+        lower, upper = q25 - cut_off, q75 + cut_off
 
+      
+        # Calculate the number of records below and above lower and above bound value respectively
+        df1 = df_monthly[df_monthly[column] > upper]
+        df2 = df_monthly[df_monthly[column] < lower]
+        return print('Total number of outliers are', df1.shape[0]+ df2.shape[0])
+    out_iqr(df_monthly ,'total_spending')
+    
+    plt.figure(figsize = (10,6))
+    sns.distplot(df_monthly.total_spending, kde=False)
+    plt.axvspan(xmin = lower,xmax= df_monthly.total_spending.min(),alpha=0.2, color='red')
+    plt.axvspan(xmin = upper,xmax= df_monthly.total_spending.max(),alpha=0.2, color='red')
+    st.pyplot(fig)
+    st.write('Here the red zone represents the outlier zone! The records present in that zone are considered as outliers')
+    
+    
+    df_new = df_monthly[(df_monthly.total_spending < upper) | (df_monthly.total_spending > lower)]
+    df_new = df_new.drop(['full_name'],axis=1)
+    
+    # Create 'This Month Total Spending' column
+    df_new['current_month_spending'] = df_new['total_spending']
+
+    # Shift the 'total_spending' values by 1 to get 'Next Month Spending'
+    df_new['next_month_spending'] = df_new['total_spending'].shift(-1)
+    df_new = df_new.drop(['total_spending'],axis=1)
+    # Drop the last row which contains NaN for 'Next Month Spending'
+    df_new.dropna(subset=['next_month_spending'], inplace=True)
+    #Display the dataframe as a table
+    st.dataframe(df_new.head(5))
+    st.write('This table shows the current data that we use in this model')
+    
+    # Create the heatmap
+    plt.figure(figsize=(4, 6))
+    mask = np.triu(np.ones_like(df_new.corr()))
+    sns.heatmap(df_new.corr()[['current_month_spending']].sort_values(by='current_month_spending', ascending=False), 
+                vmin=-1, vmax=1, annot=True, cmap='Pastel1_r')
+
+    # Display the heatmap in Streamlit
+    st.pyplot(plt)
+
+    
+    

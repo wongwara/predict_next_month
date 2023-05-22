@@ -6,6 +6,7 @@ import plotly.graph_objs as go
 
 def load_data():
     df = pd.read_csv("https://raw.githubusercontent.com/wongwara/predict_next_month/main/df_monthly.csv")
+    
     return df
 
 df = load_data()
@@ -24,4 +25,9 @@ def show_explore_page():
              Therefore, the objective of this project would be to develop a machine learning model that accepts a job title and the job description with any related words from the job as input and returns expected salary associated with that job.
              """
             )
-    st.subheader("The highest demand job classification in Australia")
+    st.subheader("The correlation between current month and other features: Heatmap")
+    
+    # Create the heatmap plot
+    fig, ax = plt.subplots(figsize=(15, 10))
+    sns.heatmap(df.corr(), annot=True, ax=ax)
+    st.pyplot(fig)

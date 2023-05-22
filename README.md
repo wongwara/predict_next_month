@@ -50,9 +50,11 @@ There are 1000 customers with the transaction data from December 2018 – Decemb
 The dataset contains the following features:
 1. Full_name: Full name of customer
 2. Age: Age of the customer
-3. Gender: Gender of the customer
-4. Current_month_spending: Amount of spending in this month
-5. Next_month_spending: Amount of next month spending
+3. month: month of transactions
+4. year: year of transactions
+5. Gender: Gender of the customer
+6. Current_month_spending: Amount of spending in this month
+7. Next_month_spending: Amount of next month spending
 
 
 ## Reference

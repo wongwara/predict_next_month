@@ -76,9 +76,10 @@ def show_explore_page():
     st.dataframe(df_new.head(5))
     st.write('This table shows the current data that we use in this model')
     
-    fig, ax = plt.subplots(figsize=(15, 10))
+    # Check heatmap
+    fig3, ax = plt.subplots(figsize=(15, 10))
     sns.heatmap(df_new.corr(), annot=True, ax=ax)
-    st.pyplot(fig)
+    st.pyplot(fig3)
     
     st.write('This heatmap shows that our dataset did not have multicolinearity problem since every features has the correlation lower than 0.6')
     

@@ -72,7 +72,7 @@ These customer information contain personal information that can be used to iden
 
 Furthermore, as data scientists, we should be cautious in how we utilise this data, although collecting SSNs is important for the project's objectives to detect the fuad, and this data will not be shared with other parties.
 
-Instead, and for this project I will look into other methods of identification or verification that do not involve SSNs.
+Instead, and for this project I use other methods of identification or verification that do not involve SSNs.
 
 ## Reference
 **For merge files**

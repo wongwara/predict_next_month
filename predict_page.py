@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from prediction import load_model
 import re
+import numpy as np
 
 data = load_model()
 regressor_loaded = data["model"]

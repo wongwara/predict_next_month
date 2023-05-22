@@ -14,6 +14,9 @@ However, you still can access the model prediction in the above link.
 <img width="1509" alt="Screenshot 2023-05-23 at 6 55 55 am" src="https://github.com/wongwara/predict_next_month/assets/107904836/abe51326-d5f3-4bf6-a1e4-0a5502972baa">
 Figure 1: show the app prediction page
 
+<img width="1509" alt="Screenshot 2023-05-23 at 6 56 08 am" src="https://github.com/wongwara/predict_next_month/assets/107904836/bc63479a-a2e6-4974-b434-fa66ba7dcf75">
+
+Figure 2: show the app explore page
 ## Overview
 Our bank recognises the significant effect these insights can have on our business and our valued clients. By leveraging machine learning's power, we can stimulate innovation, improve operational efficiency, and provide customised services to our client's needs.
 

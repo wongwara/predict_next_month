@@ -48,10 +48,10 @@ def show_predict_page():
     ok = st.button("Calculate next month total spending")
     if ok:
         X = pd.DataFrame({
-        'age':[age],
-        'current_month_spending':[current_month_spending],
         'month': [month],
         'gender': [gender],
+        'age':[age],
+        'current_month_spending':[current_month_spending],
         })
         
         next_month = regressor_loaded.predict(X)

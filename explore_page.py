@@ -79,11 +79,12 @@ def show_explore_page():
     # Create the heatmap
     plt.figure(figsize=(4, 6))
     mask = np.triu(np.ones_like(df_new.corr()))
-    sns.heatmap(df_new.corr()[['current_month_spending']].sort_values(by='current_month_spending', ascending=False), 
+    sns.heatmap(df_new.corr()[['next_month_spending']].sort_values(by='next_month_spending', ascending=False), 
                 vmin=-1, vmax=1, annot=True, cmap='Pastel1_r')
 
     # Display the heatmap in Streamlit
     st.pyplot(plt)
+    st.write('As the figure above shows that zip and job have very low correlation with our target variable (next_month_spending)')
 
     
     

@@ -13,7 +13,7 @@ def show_predict_page():
     st.write("""Client Financial management: Help clients organise their budget by predicting their spending for the next month. This will help improve financial stability and overall pleasure.""")
     st.subheader("We need some information to predict your next month")
 
-    age = st.number_input('Enter your age', min_value=0, max_value=150, step=1)
+    age = st.number_input('Enter your age', min_value=15, max_value=95, step=1)
     current_month_spending = st.number_input('Enter your current month spending', min_value=0, max_value=20000000, step=1)
     
     month_dict = {

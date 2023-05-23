@@ -21,7 +21,7 @@ def show_explore_page():
        As bank data scientists, we employ machine learning to analyse the huge amount of data available in banking. This data includes transaction history, client information, and meaningful financial information. We can swiftly process and evaluate this massive amount of data by leveraging machine learning algorithms' capabilities, detecting anomalies, and making accurate forecasts.
        """
     ) 
-    
+    st.subheader("Our data is facing the outiler problem")
     fig = plt.figure(figsize = (10,5))
     sns.distplot(df['total_spending'])
     st.pyplot(fig)
@@ -48,9 +48,9 @@ def show_explore_page():
     plt.axvspan(xmin = lower,xmax= df.total_spending.min(),alpha=0.2, color='red')
     plt.axvspan(xmin = upper,xmax= df.total_spending.max(),alpha=0.2, color='red')
     st.pyplot(fig2)
-    st.write('Here the red zone represents the outlier zone! The records present in that zone are considered as outliers')
+    st.write('The red zone is used to represents the outlier zone! The records present in that zone are considered as outliers')
     
-    st.subheader('We create the new dataframe without outlier')
+    st.subheader('Next step is we create the new dataframe without outlier')
     df_new = df[(df.total_spending < upper) | (df.total_spending > lower)]
     df_new = df_new.drop(['full_name'],axis=1)
     

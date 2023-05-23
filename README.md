@@ -5,7 +5,7 @@ Our bank recognises the significant effect these insights can have on our busine
 The goal for this project:
 Experiment A: Better decision making- Client Financial management: Help clients organise their budget by predicting their spending for the next month. This will help improve financial stability and overall pleasure.
 
-Predicting the total spending amount for next month: link to access the deploy app -> https://wongwara-predict-next-month-app-3g0mjl.streamlit.app
+Link to access the deploy app -> https://wongwara-predict-next-month-app-3g0mjl.streamlit.app
 
 **The secret key to enter the predict_page is 'ML36104'**
 

@@ -64,8 +64,28 @@ def show_predict_page():
     
     
     cates = pd.read_csv("https://raw.githubusercontent.com/wongwara/predict_next_month/main/age_cates.csv")
-    st.title("Check what is the highest spending for your Age Group in the Heatmap")
+    st.subheader("Check what is the highest spending for your Age Group in the Heatmap")
+    age_groups = {
+        (15, 24): '15-24',
+        (25, 34): '25-34',
+        (35, 44): '35-44',
+        (45, 54): '45-54',
+        (55, 64): '55-64',
+        (65, 74): '65-74',
+        (75, 84): '75-84',
+        (85, 95): '85-95'
+        }
+    def determine_age_group(age):
+        for group_range, group_name in age_groups.items():
+            if group_range[0] <= age <= group_range[1]:
+                return group_name
+        return "Unknown"
+    # Determine the age group
+    age_group = determine_age_group(age)
 
+    # Display the age group box
+    st.info(f"Your age group: {age_group}")
+    
     fig = px.imshow(cates.values, x=cates.columns, y=cates.index, color_continuous_scale='ice')
     fig.update_xaxes(side="top")  # Display x-axis labels on top
     

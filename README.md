@@ -6,13 +6,15 @@ The goal for this project:
 Experiment A: Better decision making- Client Financial management: Help clients organise their budget by predicting their spending for the next month. This will help improve financial stability and overall pleasure.
 
 Predicting the total spending amount for next month: link to access the deploy app -> https://wongwara-predict-next-month-app-3g0mjl.streamlit.app
-
+And the secret key to enter the predict_page is 'ML36104'
+This secret key was designed to add an extra degree of protection to the programme and protect sensitive data from unauthorised access. 
 ## Experiment results
 
 As a result, the best model is Decision Tree, which gives the best MAPE. However, the MAPE score is 237.48, indicating that our forecasts are 237.48% off the mark on average
 
 A high MAPE score implies that the model's predictions are **inaccurate and need to be improved**. 
 However, you still can access the model prediction in the above link.
+
 <img width="747" alt="Screenshot 2023-05-24 at 7 29 06 am" src="https://github.com/wongwara/predict_next_month/assets/107904836/f07a6c9e-c9fe-4208-8bd2-7d08a55b0c32">
 
 Figure 1: show the app prediction page

@@ -87,21 +87,13 @@ def show_predict_page():
     st.info(f"Your age group: {age_group}")
     st.write(""" The below table shows the maximum amont spend in each age group""")
     # Find the maximum value in each column
-    max_values = cates.max()
 
-    # Create a style function to highlight the maximum value
-    def highlight_max(value):
-        is_max = value == max_values[value.name]
-        background_color = 'yellow' if is_max else ''
-        return f'background-color: {background_color}'
+    def highlight_max(s):
+        is_max = s == s.max()
+        return ['background-color: yellow' if v else '' for v in is_max]
 
-    # Apply the style fn 
-    styled_cates = cates.style.applymap(highlight_max)
-
-    # Display table
-    st.table(styled_cates)
-    st.table(cates)
-
+    # Display the table in Streamlit
+    st.write(cates.style.apply(highlight_max, axis=0))
     
  
     st.write("""Wongwara Wijara 14191732 """)

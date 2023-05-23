@@ -13,19 +13,10 @@ def show_predict_page():
     st.write("""This application is create to help you organise your budget by predicting your spending for the next month.""")
     
     name = st.text_input("Write your name")
-    favorite = st.selectbox("Select your favorite", ["cat", "dog", "flower"])
-    def get_emoji(favorite):
-        if favorite == "cat":
-            return "😺"
-        elif favorite == "dog":
-            return "🐶"
-        elif favorite == "flower":
-            return "🌷"
-        else:
-            return ""
+    favorite = st.selectbox("Select your favorite", ["🐈", "🐶", "🌷"])
     Hi = st.button("Click me")
     if Hi:
-       st.write(f"Hello {name}! Your favorite is {favorite} {get_emoji(favorite)}")
+       st.write(f"Hello {name}!{favorite}")
         
     st.title("Hi Customer!")
     st.subheader("We need some information to predict your next month spending")

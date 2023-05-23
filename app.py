@@ -5,7 +5,7 @@ from explore_page import show_explore_page
 page = st.sidebar.selectbox("Explore Or Predict", ("Predict", "Explore"))
 
 if page == "Predict":
-    secret_key = "password"  # Replace with your own secret key
+    secret_key = "ML36104"  
 
     entered_key = st.text_input("Enter the secret key", type="password")
 

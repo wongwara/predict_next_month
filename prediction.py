@@ -85,3 +85,21 @@ def calculate_mape(y, y_pred):
 mape = calculate_mape(y_train, y_base_model)
 print("MAPE:", round(mape,5))
 
+tree = DecisionTreeRegressor(max_depth=5)
+tree.fit(X_train, y_train)
+
+# Model evaluation for training set
+y_train_preds_tree = tree.predict(X_train)
+y_test_preds_tree = tree.predict(X_test)
+
+import pickle
+data = {"model": tree}
+with open('saved_steps.pkl', 'wb') as file:
+    pickle.dump(data, file)
+
+def load_model():
+    with open('saved_steps.pkl', 'rb') as file:
+        data = pickle.load(file)
+    return data
+
+regressor_loaded = data["model"]

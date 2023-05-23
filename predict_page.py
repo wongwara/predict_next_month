@@ -4,9 +4,25 @@ from prediction import load_model
 import re
 import numpy as np
 
+
+# Load model
+regressor_loaded = pickle.load(open('knn_model.pkl', 'rb'))
 data = load_model()
 regressor_loaded = data["model"]
 
+# Preprocessing steps
+def preprocess_data(data):
+
+    # Select features
+    features = ['year', 'month', 'job', 'age', 'current_month_spending']
+    data = data[selected_features]
+
+    # Label encoding
+    le = LabelEncoder()
+    data['age'] = le.fit_transform(data['age'])
+    data['job'] = le.fit_transform(data['job'])
+
+    return data
 
 def show_predict_page():
     st.title("💵 Predict Next Month")
@@ -32,12 +48,6 @@ def show_predict_page():
         
     }
     
-    gender_dict = {
-        'Male': 1,
-        'Female': 0,
-    }
-    
-   
     month_options = list(month_dict.keys())
     month = st.selectbox("month", month_options)
     month = month_dict[month]
@@ -47,7 +57,7 @@ def show_predict_page():
 
     ok = st.button("Calculate next month total spending")
     if ok:
-        X = pd.DataFrame({
+        X = pd.DataFrame({ 'month', 'job', 'age', 'current_month_spending'
         'month': [month],
         'gender': [gender],
         'age':[age],

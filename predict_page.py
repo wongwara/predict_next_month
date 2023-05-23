@@ -18,7 +18,7 @@ def show_predict_page():
     
     st.title(f"Hello {name}!{favorite}, welcome to the application")
       
-    st.subheader("We need some information to predict your next month spending")
+    st.write("We need some information to predict your next month spending")
     age = st.number_input('Enter your age', min_value=15, max_value=95, step=1)
     current_month_spending = st.number_input('Enter your current month spending', min_value=0, max_value=20000000, step=1)
     

@@ -17,7 +17,7 @@ As a result, the best model is Decision Tree, which gives the best MAPE. However
 A high MAPE score implies that the model's predictions are **inaccurate and need to be improved**. 
 However, you still can access the model prediction in the above link.
 
-<img width="747" alt="Screenshot 2023-05-24 at 7 29 06 am" src="https://github.com/wongwara/predict_next_month/assets/107904836/f07a6c9e-c9fe-4208-8bd2-7d08a55b0c32">
+<img width="1509" alt="Screenshot 2023-05-24 at 8 01 03 am" src="https://github.com/wongwara/predict_next_month/assets/107904836/ec6b599b-0937-42c6-908c-9966ea7dde18">
 
 Figure 1: show the app prediction page
 

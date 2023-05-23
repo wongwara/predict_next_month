@@ -16,14 +16,14 @@ def show_predict_page():
     sentence = f"Hello {name}! Your favorite is {favorite} {get_emoji(favorite)}"
     st.selectbox("Select your favorite", ["cat", "dog", "flower"])
     def get_emoji(favorite):
-    if favorite == "cat":
-        return "😺"
-    elif favorite == "dog":
-        return "🐶"
-    elif favorite == "flower":
-        return "🌸"
-    else:
-        return ""
+        if favorite == "cat":
+            return "😺"
+        elif favorite == "dog":
+            return "🐶"
+        elif favorite == "flower":
+            return "🌸"
+        else:
+            return ""
     st.button("Click me")
     if st.button("Click me"):
         sentence = generate_sentence(name, favorite)

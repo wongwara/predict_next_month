@@ -24,7 +24,6 @@ def show_predict_page():
         age = st.number_input('Enter your age', min_value=15, max_value=95, step=1)
         st.write("The minimum age for our data is 15 and maximum is 95 years old")
         current_month_spending = st.number_input('Enter your current month spending', min_value=0, max_value=20000000, step=1)
-        st.write("The lowest monthly amont spending should be higher than 0")
     
     month_dict = {
         'Jan': 0,

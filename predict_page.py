@@ -27,9 +27,9 @@ def show_predict_page():
         else:
             return ""
     st.button("Click me")
-    if st.button("Click me"):
-        sentence = generate_sentence(name, favorite)
-        st.write(sentence)
+        if st.button("Click me"):
+            sentence = generate_sentence(name, favorite)
+            st.write(sentence)
         
     st.title("Hi Customer!")
     st.subheader("We need some information to predict your next month spending")

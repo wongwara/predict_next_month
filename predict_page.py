@@ -59,7 +59,7 @@ def show_predict_page():
         next_month_str = str(next_month[0])  # Convert to string
 
         # Display the predicted next month spending
-        st.write(f"the predict next month spending for {name.upper()}!{favorite} would be {next_month_str}")
+        st.write(f"the predict next month spending for {name.upper()}!{favorite} would be {next_month_str}$")
     
     
     cates = pd.read_csv("https://raw.githubusercontent.com/wongwara/predict_next_month/main/age_cates.csv")

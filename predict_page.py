@@ -87,7 +87,7 @@ def show_predict_page():
     st.info(f"Your age group: {age_group}")
     st.write(""" The below table shows the maximum amont spend in each age group""")
     # Find the maximum value in each column
-    cates = cates.round(0)
+    cates = cates.round(0).style.format("{:.0f}")
     def highlight_max(s):
         is_max = s == s.max()
         return ['background-color: yellow' if v else '' for v in is_max]

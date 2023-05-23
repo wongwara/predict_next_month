@@ -66,8 +66,8 @@ def show_predict_page():
     cates = pd.read_csv("https://raw.githubusercontent.com/wongwara/predict_next_month/main/age_cates.csv")
     st.title("Check what is the highest spending for your Age Group in the Heatmap")
 
-    # Create the heatmap figure using Plotly
-    fig = px.imshow(category, color_continuous_scale='CMRmap_r')
+    fig = px.imshow(cates.values, x=cates.columns, y=df.index, color_continuous_scale='CMRmap_r')
+    fig.update_xaxes(side="top")  # Display x-axis labels on top
     
     # Set the axes labels and title
     fig.update_layout(

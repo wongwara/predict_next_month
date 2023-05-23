@@ -9,13 +9,26 @@ regressor_loaded = data["model"]
 
 
 def show_predict_page():
-    st.title("🌸 Application for Client to Predict their next month spending")
+    st.title("Application for Client to Predict their next month spending")
     st.write("""This application is create to help you organise your budget by predicting your spending for the next month.""")
     
     st.text_input("Write your name")
+    sentence = f"Hello {name}! Your favorite is {favorite} {get_emoji(favorite)}"
     st.selectbox("Select your favorite", ["cat", "dog", "flower"])
+    def get_emoji(favorite):
+    if favorite == "cat":
+        return "😺"
+    elif favorite == "dog":
+        return "🐶"
+    elif favorite == "flower":
+        return "🌸"
+    else:
+        return ""
     st.button("Click me")
-    
+    if st.button("Click me"):
+        sentence = generate_sentence(name, favorite)
+        st.write(sentence)
+        
     st.title("Hi Customer!")
     st.subheader("We need some information to predict your next month spending")
     age = st.number_input('Enter your age', min_value=15, max_value=95, step=1)

@@ -15,10 +15,9 @@ def show_predict_page():
     name = st.text_input("Write your name")
     favorite = st.selectbox("Select your favorite", ["🐈", "🐶", "🌷"])
     Hi = st.button("Click me")
-    if Hi:
-       st.write(f"Hello {name}!{favorite}")
-        
-    st.title("Hi Customer!")
+    
+    st.title(f"Hello {name}!{favorite}, welcome to the application")
+      
     st.subheader("We need some information to predict your next month spending")
     age = st.number_input('Enter your age', min_value=15, max_value=95, step=1)
     current_month_spending = st.number_input('Enter your current month spending', min_value=0, max_value=20000000, step=1)

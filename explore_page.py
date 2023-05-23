@@ -82,6 +82,8 @@ def show_explore_page():
     # Display the heatmap in Streamlit
     st.pyplot(plt)
     st.write('As the figure above shows that state and job have very low correlation with our target variable (next_month_spending)')
+    st.write("For more details please follow the link below")
+    st.markdown("[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-brightgreen)](https://github.com/wongwara/predict_next_month)")
 
     
     

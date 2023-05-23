@@ -9,12 +9,12 @@ Predicting the total spending amount for next month: link to access the deploy a
 
 ## Experiment results
 
-As a result, the best model is Decision Tree, which gives the best MAPE. However, the MAPE score is 113.44, which means that on average, our predictions depart from the actual values by 113.44%. 
+As a result, the best model is Decision Tree, which gives the best MAPE. However, the MAPE score is 237.48, indicating that our forecasts are 237.48% off the mark on average
 
 A high MAPE score implies that the model's predictions are **inaccurate and need to be improved**. 
 However, you still can access the model prediction in the above link.
+<img width="747" alt="Screenshot 2023-05-24 at 7 29 06 am" src="https://github.com/wongwara/predict_next_month/assets/107904836/f07a6c9e-c9fe-4208-8bd2-7d08a55b0c32">
 
-<img width="1509" alt="Screenshot 2023-05-23 at 6 55 55 am" src="https://github.com/wongwara/predict_next_month/assets/107904836/abe51326-d5f3-4bf6-a1e4-0a5502972baa">
 Figure 1: show the app prediction page
 
 <img width="1509" alt="Screenshot 2023-05-23 at 6 56 08 am" src="https://github.com/wongwara/predict_next_month/assets/107904836/bc63479a-a2e6-4974-b434-fa66ba7dcf75">

@@ -85,36 +85,3 @@ def calculate_mape(y, y_pred):
 mape = calculate_mape(y_train, y_base_model)
 print("MAPE:", round(mape,5))
 
-# Decsion Tree Regressor
-from sklearn.tree import DecisionTreeRegressor
-
-tree_model = DecisionTreeRegressor(max_depth=5)
-tree_model.fit(X_train, y_train)
-
-# Model evaluation for training set
-y_train_preds_tree = tree_model.predict(X_train)
-print(f"mse scores on the training set: {round(mean_squared_error(y_train, y_train_preds_tree), 3)}")
-print(f"mae scores on the training set: {round(mean_absolute_error(y_train, y_train_preds_tree), 3)}")
-print(f"R-square scores on the training set: {round(r2_score(y_train, y_train_preds_tree), 4)}")
-print(f"____________________")
-
-y_test_preds_tree = tree_model.predict(X_test)
-print(f"mse scores on the test set: {round(mean_squared_error(y_test, y_test_preds_tree),3)}")
-print(f"mae scores on the test set: {round(mean_absolute_error(y_test, y_test_preds_tree),3)}")
-print(f"R-square scores on the test set: {round(r2_score(y_test, y_test_preds_tree),4)}")
-
-mape_tree = calculate_mape(y_test, y_test_preds_tree)
-print("MAPE:", round(mape_tree,5))
-
-import pickle
-data = {"model": tree_model}
-with open('saved_steps.pkl', 'wb') as file:
-    pickle.dump(data, file)
-
-def load_model():
-    with open('saved_steps.pkl', 'rb') as file:
-        data = pickle.load(file)
-    return data
-
-regressor_loaded = data["model"]
-

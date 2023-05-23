@@ -6,7 +6,9 @@ The goal for this project:
 Experiment A: Better decision making- Client Financial management: Help clients organise their budget by predicting their spending for the next month. This will help improve financial stability and overall pleasure.
 
 Predicting the total spending amount for next month: link to access the deploy app -> https://wongwara-predict-next-month-app-3g0mjl.streamlit.app
-And the secret key to enter the predict_page is 'ML36104'
+
+**The secret key to enter the predict_page is 'ML36104'**
+
 This secret key was designed to add an extra degree of protection to the programme and protect sensitive data from unauthorised access. 
 ## Experiment results
 

@@ -45,7 +45,7 @@ df_new['next_month_spending'] = df_new['total_spending'].shift(-1)
 
 # Drop the last row which contains NaN for 'Next Month Spending'
 df_new.dropna(subset=['next_month_spending'], inplace=True)
-df_new = df_new.drop(['total_spending','zip','job','year'],axis=1)
+df_new = df_new.drop(['total_spending','state','job','year','gender'],axis=1)
 
 
 from sklearn.model_selection import train_test_split

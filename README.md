@@ -21,7 +21,7 @@ However, you still can access the model prediction in the above link.
 
 Figure 1: show the app prediction page
 
-<img width="1509" alt="Screenshot 2023-05-23 at 6 56 08 am" src="https://github.com/wongwara/predict_next_month/assets/107904836/bc63479a-a2e6-4974-b434-fa66ba7dcf75">
+<img width="1479" alt="Screenshot 2023-05-24 at 7 59 54 am" src="https://github.com/wongwara/predict_next_month/assets/107904836/7994f092-0e50-42dd-8478-6598e8fe7ee1">
 
 Figure 2: show the app explore page
 

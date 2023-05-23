@@ -21,16 +21,6 @@ def show_explore_page():
        As bank data scientists, we employ machine learning to analyse the huge amount of data available in banking. This data includes transaction history, client information, and meaningful financial information. We can swiftly process and evaluate this massive amount of data by leveraging machine learning algorithms' capabilities, detecting anomalies, and making accurate forecasts.
        """
     ) 
-    st.subheader("The correlation between current month and other features: Heatmap")
-    # Select numeric columns only
-    numeric_columns = df.select_dtypes(include=['float64', 'int64'])
-
-    # Create the heatmap plot
-    fig, ax = plt.subplots(figsize=(15, 10))
-    sns.heatmap(numeric_columns.corr(), annot=True, ax=ax)
-    st.pyplot(fig)
-    
-    st.write('This heatmap shows that our dataset did not have multicolinearity problem since every features has the correlation lower than 0.6')
     
     fig = plt.figure(figsize = (10,5))
     sns.distplot(df['total_spending'])

@@ -13,14 +13,9 @@ def show_predict_page():
     st.title("Application for Client to Predict their next month spending")
     st.write("""This application is create to help you organise your budget by predicting your spending for the next month.""")
     col1, col2 = st.columns(2)
-    with col1:
-        name = st.text_input("Write your name")
-        favorite = st.selectbox("Select your favorite", ["🐈", "🐶", "🌷"])
-        Hi = st.button("Click me")
     
-        st.title(f"Hello {name.upper()}!{favorite}, Welcome to the application")
-    with col2: 
-        st.write("We need some information to predict your next month spending")
+    with col1: 
+        st.subheader("We need some information to predict your next month spending")
         age = st.number_input('Enter your age', min_value=15, max_value=95, step=1)
         st.write("The minimum age for our data is 15 and maximum is 95 years old")
         current_month_spending = st.number_input('Enter your current month spending', min_value=0, max_value=20000000, step=1)
@@ -44,6 +39,12 @@ def show_predict_page():
         month_options = list(month_dict.keys())
         month = st.selectbox("month", month_options)
         month = month_dict[month]
+    with col2:
+        name = st.text_input("Write your name")
+        favorite = st.selectbox("Select your favorite", ["🐈", "🐶", "🌷"])
+        Hi = st.button("Click me")
+    
+        st.subheader(f"Hello {name.upper()}!{favorite}, Welcome to the application")
 
     ok = st.button("Calculate next month total spending")
     if ok:
@@ -58,7 +59,7 @@ def show_predict_page():
         next_month_str = str(next_month[0])  # Convert to string
 
         # Display the predicted next month spending
-        st.write(f"Your predict next month spending would be {next_month_str}")
+        st.write(f"{name.upper()}!{favorite} the predict next month spending would be {next_month_str}")
     
     
     cates = pd.read_csv("https://raw.githubusercontent.com/wongwara/predict_next_month/main/age_cates.csv")

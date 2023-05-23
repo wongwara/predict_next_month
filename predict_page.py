@@ -32,24 +32,16 @@ def show_predict_page():
         
     }
     
-    gender_dict = {
-        'Male': 1,
-        'Female': 0,
-    }
-    
    
     month_options = list(month_dict.keys())
     month = st.selectbox("month", month_options)
     month = month_dict[month]
-    gender_options = list(gender_dict.keys())
-    gender = st.selectbox("gender", gender_options)
-    gender = gender_dict[gender]
+    
 
     ok = st.button("Calculate next month total spending")
     if ok:
         X = pd.DataFrame({
         'month': [month],
-        'gender': [gender],
         'age':[age],
         'current_month_spending':[current_month_spending],
         })
@@ -59,6 +51,7 @@ def show_predict_page():
         next_month_str = str(next_month[0])  # Convert to string
 
         # Display the predicted next month spending
-        st.write(f"Your next month spending will be: {next_month_str}")
-      
+        st.write(f"Your predict next month spending would be {next_month_str}")
+    
+    st.write("""Wongwara Wijara 14191732 """)
     st.write(""" 36106 Machine Learning Algorithms and Applications - Autumn 2023 University of Technology Sydney """)

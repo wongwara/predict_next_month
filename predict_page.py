@@ -12,7 +12,7 @@ def show_predict_page():
     st.title("Application for Client to Predict their next month spending")
     st.write("""This application is create to help you organise your budget by predicting your spending for the next month.""")
     
-    st.text_input("Write your name")
+    name = st.text_input("Write your name")
     st.selectbox("Select your favorite", ["cat", "dog", "flower"])
     def get_emoji(favorite):
         if favorite == "cat":

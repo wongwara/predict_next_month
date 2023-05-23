@@ -61,5 +61,23 @@ def show_predict_page():
         # Display the predicted next month spending
         st.write(f"Your predict next month spending would be {next_month_str}")
     
+    
+    cates = pd.read_csv("https://raw.githubusercontent.com/wongwara/predict_next_month/main/age_cates.csv")
+    st.title("Check what is the highest spending for your Age Group in the Heatmap")
+
+    # Create the heatmap figure using Plotly
+    fig = px.imshow(age_pivot_table, color_continuous_scale='CMRmap_r')
+    
+    # Set the axes labels and title
+    fig.update_layout(
+        xaxis_title="X-axis",
+        yaxis_title="Y-axis",
+        title="Age Group Heatmap"
+    )
+    
+    # Display the plot in Streamlit
+    st.plotly_chart(fig)
+    
+ 
     st.write("""Wongwara Wijara 14191732 """)
     st.write(""" 36106 Machine Learning Algorithms and Applications - Autumn 2023 University of Technology Sydney """)

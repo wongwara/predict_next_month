@@ -87,8 +87,7 @@ def show_predict_page():
     st.info(f"Your age group: {age_group}")
     
     # Create the heatmap using Seaborn
-    fig, ax = plt.subplots()
-    sns.heatmap(cates.values, xticklabels=cates.columns, yticklabels=cates.index, cmap='ice', ax=ax)
+    fig = sns.heatmap(cates.values, xticklabels=cates.columns, yticklabels=cates.index, cmap='ice')
     
     # Set the axes labels and title
     fig.update_layout(

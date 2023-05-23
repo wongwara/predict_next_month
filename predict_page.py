@@ -85,19 +85,9 @@ def show_predict_page():
 
     # Display the age group box
     st.info(f"Your age group: {age_group}")
-    
-    # Create the heatmap using Seaborn
-    fig = sns.heatmap(cates.values, xticklabels=cates.columns, yticklabels=cates.index, cmap='ice')
-    
-    # Set the axes labels and title
-    fig.update_layout(
-        xaxis_title="Age-group",
-        yaxis_title="Categories",
-        title="Age Group Heatmap"
-    )
-    
-    # Display the plot in Streamlit
-    st.plotly_chart(fig)
+    st.write(""" The below table shows the maximum amont spend in each age group""")
+    st.table(cates)
+
     
  
     st.write("""Wongwara Wijara 14191732 """)

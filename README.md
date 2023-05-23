@@ -23,8 +23,9 @@ Figure 2: show the app explore page
 
 ## Project Structure
 ```
-├── README.md          <- The top-level documentation for this project.
-├── df_monthly.csv     <- The final data sets for monthly transactions.
+├── README.md             <- The top-level documentation for this project.
+├── df_monthly.csv        <- The final data sets for monthly transactions.
+├── cates.csv             <- The final data sets for maximum purchase in each age_group.
 ├── Experient A - Client Financial management.ipynb <- Jupyter notebooks 
 ├── requirements.txt      <- The requirements file for the project
 ├── app.py                <- for run in streamlit

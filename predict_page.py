@@ -90,10 +90,10 @@ def show_predict_page():
     cates = round(cates,2)
     def highlight_max(s):
         is_max = s == s.max()
-            if s.name == s.index[0]:  # Check if it's the first column
-                return ['background-color: yellow' if v else '' for v in is_max]
-            else:
-                return ['' for _ in s]  
+        if s.name == s.index[0]:  # Check if it's the first column
+            return ['background-color: yellow' if v else '' for v in is_max]
+        else:
+            return ['' for _ in s]  
 
     # Display the table in Streamlit
     st.write(cates.style.apply(highlight_max, axis=0))

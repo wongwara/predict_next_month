@@ -10,8 +10,7 @@ regressor_loaded = data["model"]
 
 def show_predict_page():
     st.title("🌸 Application for Client to Predict their next month spending")
-    st.write("""This application is create to Help clients organise their budget by predicting their spending for the next month.""")
-    st.write("""This will help improve financial stability and overall pleasure.""")
+    st.write("""This application is create to help you organise your budget by predicting your spending for the next month.""")
     
     st.subheader("We need some information to predict your next month spending")
     age = st.number_input('Enter your age', min_value=15, max_value=95, step=1)

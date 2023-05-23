@@ -24,11 +24,9 @@ def show_predict_page():
         age = st.number_input('Enter your age', min_value=15, max_value=95, step=1)
         st.write("The minimum age for our data is 15 and maximum is 95 years old")
         current_month_spending = st.number_input('Enter your current month spending', min_value=0, max_value=20000000, step=1)
-        month_options = list(month_dict.keys())
-        month = st.selectbox("month", month_options)
-        month = month_dict[month]
+      
         
-    month_dict = {
+        month_dict = {
         'Jan': 0,
         'Feb': 1,
         'March':2,
@@ -42,8 +40,10 @@ def show_predict_page():
         'Nov': 10,
         'Dec':11,
         
-    }
-    
+        }
+        month_options = list(month_dict.keys())
+        month = st.selectbox("month", month_options)
+        month = month_dict[month]
 
     ok = st.button("Calculate next month total spending")
     if ok:

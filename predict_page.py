@@ -67,7 +67,7 @@ def show_predict_page():
     st.title("Check what is the highest spending for your Age Group in the Heatmap")
 
     # Create the heatmap figure using Plotly
-    fig = px.imshow(age_pivot_table, color_continuous_scale='CMRmap_r')
+    fig = px.imshow(category, color_continuous_scale='CMRmap_r')
     
     # Set the axes labels and title
     fig.update_layout(

@@ -3,6 +3,7 @@ import pandas as pd
 from prediction import load_model
 import re
 import numpy as np
+import plotly.express as px
 
 data = load_model()
 regressor_loaded = data["model"]

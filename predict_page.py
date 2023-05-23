@@ -86,13 +86,13 @@ def show_predict_page():
     # Display the age group box
     st.info(f"Your age group: {age_group}")
     
-    fig = px.imshow(cates.values, x=cates.columns, y=cates.index, color_continuous_scale='ice')
+    fig = sns.imshow(cates.values, x=cates.columns, y=cates.index, color_continuous_scale='ice')
     fig.update_xaxes(side="top")  # Display x-axis labels on top
     
     # Set the axes labels and title
     fig.update_layout(
-        xaxis_title="X-axis",
-        yaxis_title="Y-axis",
+        xaxis_title="Age-group",
+        yaxis_title="Categories",
         title="Age Group Heatmap"
     )
     

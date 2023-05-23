@@ -23,11 +23,11 @@ def show_predict_page():
         elif favorite == "dog":
             return "🐶"
         elif favorite == "flower":
-            return "🌸"
+            return "🌷"
         else:
             return ""
-    st.button("Click me")
-    if st.button("Click me"):
+    Hi = st.button("Click me")
+    if Hi:
        sentence = generate_sentence(name, favorite)
        st.write(sentence)
         

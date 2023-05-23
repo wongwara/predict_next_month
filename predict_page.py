@@ -41,7 +41,7 @@ def show_predict_page():
         month = month_dict[month]
     with col2:
         name = st.text_input("Write your name")
-        favorite = st.selectbox("Select your favorite", ["🐈", "🐶", "🌷"])
+        favorite = st.selectbox("Select your favorite", ["🐶","🌷","🐈","🦊", "🦁"])
         Hi = st.button("Click me")
     
         st.subheader(f"Hello {name.upper()}!{favorite}, Welcome to the application")

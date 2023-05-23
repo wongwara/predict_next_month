@@ -11,21 +11,12 @@ regressor_loaded = data["model"]
 def show_predict_page():
     st.title("🌸 Application for Client to Predict their next month spending")
     st.write("""This application is create to help you organise your budget by predicting your spending for the next month.""")
-    secret_key = "your_secret_key"  # Replace with your own secret key
-
-    entered_key = st.text_input("Enter the secret key", type="password")
-
-    if entered_key == secret_key:
-        st.success("Authentication successful!")
-        # Add your application logic here
-    else:
-        st.error("Authentication failed!")
     
     st.text_input("Write your name")
     st.selectbox("Select your favorite", ["cat", "dog", "flower"])
     st.button("Click me")
     
-    st.title("A [link]()")
+    st.title("Hi Customer!")
     st.subheader("We need some information to predict your next month spending")
     age = st.number_input('Enter your age', min_value=15, max_value=95, step=1)
     current_month_spending = st.number_input('Enter your current month spending', min_value=0, max_value=20000000, step=1)

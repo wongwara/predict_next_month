@@ -85,6 +85,9 @@ def calculate_mape(y, y_pred):
 mape = calculate_mape(y_train, y_base_model)
 print("MAPE:", round(mape,5))
 
+# Decsion Tree Regressor
+from sklearn.tree import DecisionTreeRegressor
+
 tree = DecisionTreeRegressor(max_depth=5)
 tree.fit(X_train, y_train)
 

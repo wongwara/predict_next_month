@@ -85,8 +85,8 @@ def show_predict_page():
 
     # Display the age group box
     st.info(f"Your age group: {age_group}")
-    cates_names = cates.index.tolist()
-    fig = px.imshow(cates.values, x=cates.columns, y=cates_names, color_continuous_scale='ice')
+    
+    fig = px.imshow(cates.values, x=cates.columns, y=cates.rows[0], color_continuous_scale='ice')
     fig.update_xaxes(side="top")  # Display x-axis labels on top
     
     # Set the axes labels and title

@@ -16,7 +16,7 @@ def show_predict_page():
     favorite = st.selectbox("Select your favorite", ["🐈", "🐶", "🌷"])
     Hi = st.button("Click me")
     
-    st.title(f"Hello {name}!{favorite}, welcome to the application")
+    st.title(f"Hello {name.upper}!{favorite}, welcome to the application")
       
     st.write("We need some information to predict your next month spending")
     age = st.number_input('Enter your age', min_value=15, max_value=95, step=1)

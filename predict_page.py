@@ -13,7 +13,9 @@ def show_predict_page():
     st.write("""This application is create to help you organise your budget by predicting your spending for the next month.""")
     
     st.text_input("Write your name")
-    sentence = f"Hello {name}! Your favorite is {favorite} {get_emoji(favorite)}"
+    def generate_sentence(name, favorite):
+        sentence = f"Hello {name}! Your favorite is {favorite} {get_emoji(favorite)}"
+        return sentence
     st.selectbox("Select your favorite", ["cat", "dog", "flower"])
     def get_emoji(favorite):
         if favorite == "cat":

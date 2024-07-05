@@ -3,7 +3,8 @@
 Our bank recognises the significant effect these insights can have on our business and our valued clients. By leveraging machine learning's power, we can stimulate innovation, improve operational efficiency, and provide customised services to our client's needs.
 
 The goal for this project:
-Experiment A: Better decision making- Client Financial management: Help clients organise their budget by predicting their spending for the next month. This will help improve financial stability and overall pleasure.
+
+Experiment A: Better decision making- Client Financial management to Help clients organise their budget by predicting their spending for the next month. This will help improve financial stability and overall pleasure.
 
 Link to access the deploy app -> https://wongwara-predict-next-month-app-3g0mjl.streamlit.app
 
